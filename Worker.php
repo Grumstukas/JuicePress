@@ -8,6 +8,10 @@ class Worker
 
     }
 
+    private function check_container(){
+
+    }
+
     private function rearrange_fruits_in_containers(){
 
     }
@@ -19,6 +23,8 @@ class Worker
     private function turn_off_line(){
 
     }
+
+
 
 
 }

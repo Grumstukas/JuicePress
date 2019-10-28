@@ -28,20 +28,3 @@ $factory->info();
 
 $factory->loadTruck(1000);
 $factory->info();
-
-//$factory->unloadTruck(['banana'=>6000, 'apple'=>1000, 'pineapple' => 3000]);
-//$factory->unloadTruck(['apricot'=>2000, 'apple'=>1000]);
-//$factory->unloadTruck(['apricot'=>2000, 'apple'=>1000]);
-//$factory->unloadTruck(['pear'=>2000, 'cherry'=>4000, 'melon'=>2000]);
-//$factory->unloadTruck(['apple'=>5000]);
-//$factory->info();
-//$line1 = $factory->runLine(1, 'small', 'banana');
-//$line2 = $factory->runLine(1, 'small', 'banana');
-//$line3 = $factory->runLine(1, 'big', 'apple_cherry');
-//$factory->stopLine($line3);
-//$factory->info();
-//$factory->stopLine($line1);
-//$factory->stopLine($line2);
-//$factory->loadTruck(1000);
-//$factory->loadTruck(9000);
-//$factory->info();
