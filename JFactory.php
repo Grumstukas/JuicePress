@@ -6,12 +6,38 @@ namespace Tasty_Juices;
 
 interface JFactory
 {
-    public function unloadTruck($truck_array);// argumentas array ['banana'=>6000,'apple'=>1000]
-    public function loadTruck($packs);// argumentas pakuočių kiekis integer vnt.
-    public function runLine($hours, $line_type, $recipes);// argumentai: linijos darbo valandų skaičius, linijos tipas "big" arba "small" ir
-    //receptas iš masyvo $recipes pvz 'sun365'. Ši funkcija turi grąžinti unikalų ID,
-    // pagul kurį būtų galima identifikuoti veikiančią produkcijos liniją
-    public function stopLine($id); // argumentas veikiančios linijos ID grąžintas iš funkcijos runLine()
-    public function info();// išvesti suformatuotą informacią apie padėtį gamykloje: talpyklas, pagamintas pakuotes ir jų skaičių, veikiančias linijas
+    /**
+     * @param $truck_array - array of fruits quantities ['banana'=>6000,'apple'=>1000]
+     * @return mixed
+     */
+    public function unloadTruck($truck_array);
+
+    /**
+     * @param $packs - integer amount of Juices Packs
+     * @return mixed
+     */
+    public function loadTruck($packs);
+
+    /**
+     * @param $hours - integer amount of time, that line is working
+     * @param $line_type - big or small line
+     * @param $recipes - key of recipes array
+     * @return mixed - ID of this working productionline
+     */
+    public function runLine($hours, $line_type, $recipes);
+
+    /**
+     * @param $id of working production line (provided by loadTruck function)
+     * @return mixed
+     */
+    public function stopLine($id);
+
+    /**
+     * @return information:
+     * fruits amounts
+     * production lines states
+     * amount of packages in warehouse
+     */
+    public function info();
 
 }
