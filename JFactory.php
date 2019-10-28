@@ -10,7 +10,7 @@ interface JFactory
      * @param $truck_array - array of fruits quantities ['banana'=>6000,'apple'=>1000]
      * @return mixed
      */
-    public function unloadTruck($truck_array);
+    public function unloadTruck($truck_array, Worker $worker, $containers);
 
     /**
      * @param $packs - integer amount of Juices Packs
